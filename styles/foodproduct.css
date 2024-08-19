@@ -1,0 +1,123 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute space between elements */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.restaurant-info {
+    flex-grow: 1; /* Allow this section to grow */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the text */
+    text-align: center;
+}
+
+.restaurant-name {
+    font-size: 2em;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    color: #e74c3c;
+}
+
+.restaurant-details {
+    font-size: 1em;
+    margin: 5px 0 0 0;
+    color: #ecf0f1;
+}
+
+/* Grid container */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+/* Product card */
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Product image */
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Product info */
+.product-info {
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #28a745;
+}
+
+.product-amount-sold {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Product detail page styles */
+.product-detail {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-detail-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Additional styles for the header and other components */

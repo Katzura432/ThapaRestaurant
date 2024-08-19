@@ -1,0 +1,43 @@
+<!-- product-detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header class="header">
+        <img src="logo/logo.png" alt="Restaurant Logo" class="logo" style="height:80px">
+        <div class="restaurant-info">
+            <h1 class="restaurant-name">Thapa Restaurant</h1>
+            <p>Contact: +977 1231231 | Email: contact@thapa.com.np</p>
+        </div>
+    </header>
+
+    <!-- Product details section -->
+    <div id="product-detail" class="product-detail">
+        <!-- Product details will be inserted here by JavaScript -->
+    </div>
+
+    <script>
+        // Fetch the product details from local storage
+        const selectedProduct = JSON.parse(localStorage.getItem('selectedProduct'));
+
+        if (selectedProduct) {
+            // Render the product details
+            const productDetailElement = document.getElementById('product-detail');
+            productDetailElement.innerHTML = `
+                <h2>${selectedProduct.name}</h2>
+                <img src="${selectedProduct.pictureUrl}" alt="${selectedProduct.name}" class="product-detail-image">
+                <p><strong>Description:</strong> ${selectedProduct.description}</p>
+                <p><strong>Origin:</strong> ${selectedProduct.origin}</p>
+                <p><strong>Taste Type:</strong> ${selectedProduct.tasteType}</p>
+                <p><strong>Preparation Time:</strong> ${selectedProduct.prepTime}</p>
+                <p><strong>How to Prepare:</strong> ${selectedProduct.prepMethod}</p>
+            `;
+        }
+    </script>
+</body>
+</html>
